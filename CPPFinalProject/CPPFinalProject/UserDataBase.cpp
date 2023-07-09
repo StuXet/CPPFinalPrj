@@ -2,11 +2,28 @@
 #include <iostream>
 #include "UserCreator.h"
 #include <cstdio>
+#include <fstream>
 
 //searches and returns a user in users by id
 User* UserDatabase::GetUser(std::string id)
 {
-    return nullptr;
+    std::string fileName = id + ".txt";
+    std::ifstream file(fileName);
+    if (file) {
+        std::cout << "User with ID " << id << " exists." << std::endl;
+
+        std::string line;
+        while (std::getline(file, line)) {
+            std::cout << line << std::endl;
+        }
+
+        file.close();
+        return nullptr;
+    }
+    else {
+        std::cout << "User with ID " << id << " does not exist." << std::endl;
+        return nullptr;
+    }
 }
 
 //adds a user to users. create the a user with userCreator 

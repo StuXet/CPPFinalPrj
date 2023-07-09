@@ -11,5 +11,9 @@ int main()
     UserDatabase userDatabase;
     User user;
     //userDatabase.AddUser(user);
-    userDatabase.RemoveUser(&user);
+    //userDatabase.RemoveUser(&user);
+
+    string id = "110";
+    userDatabase.GetUser(id);
+    
 }
