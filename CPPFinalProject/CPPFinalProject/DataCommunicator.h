@@ -14,6 +14,6 @@ public:
 
 	bool AddUser(std::string userID);
 	bool RemoveUser(std::string userID);
-	void EditUser(std::string userID);
+	void EditUser(std::string userID, string* newID, string* newFirstName, string* newLastName, Date* newStartDate, int* subTimeAddative);
 };
 

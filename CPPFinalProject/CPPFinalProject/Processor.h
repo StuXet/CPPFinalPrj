@@ -17,10 +17,18 @@ private:
 public:
 	Processor();
 
+<<<<<<< Updated upstream
 	DataCommunicator GetDataCommunicator();
 	Authenticator GetAuthenticator();
 	Database GetDatabase();
 	Dashboard GetDashboard();
+=======
+    void CheckUser(std::string userID);
+    void AddUser(string _id, string _firstName, string _lastName, Date startDate, int subTime);
+    void RemoveUser(std::string userID);
+    void EditUser(std::string userID);
+
+>>>>>>> Stashed changes
 
 };
 
