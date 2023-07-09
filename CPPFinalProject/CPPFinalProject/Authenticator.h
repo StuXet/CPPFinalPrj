@@ -10,6 +10,7 @@ public:
 
 	User* CheckID(std::string id);
 
+
 private: 
 	Database database;
 };

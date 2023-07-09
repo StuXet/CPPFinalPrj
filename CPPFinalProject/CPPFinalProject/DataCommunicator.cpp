@@ -1,6 +1,6 @@
 #include "DataCommunicator.h"
 
-DataCommunicator::DataCommunicator(Database _database)
+DataCommunicator::DataCommunicator(Database _database) : database(_database)
 {
 }
 

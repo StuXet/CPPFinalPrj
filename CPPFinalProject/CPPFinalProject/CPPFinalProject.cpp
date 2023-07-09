@@ -1,7 +1,10 @@
 #include <iostream>
-
+#include "Processor.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Processor* prc = new Processor;
+    Date* date = new Date;
+
+    date->print();
 }

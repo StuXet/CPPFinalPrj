@@ -4,18 +4,19 @@
 #include "Dashboard.h"
 #include "DataCommunicator.h"
 #include "Database.h"
+#include <string>
 
 class Processor
 {
 private:
-
-	DataCommunicator dataCommunicator;
-	Authenticator authenticator;
-	Database database;
-	Dashboard dashboard;
+    DataCommunicator* dataCommunicator;
+    Authenticator* authenticator;
+    Database* database;
+    Dashboard* dashboard;
 
 public:
-	Processor();
+    Processor();
+    ~Processor();
 
 
     void CheckUser(std::string userID);
@@ -24,4 +25,3 @@ public:
     void EditUser(std::string userID);
 
 };
-
