@@ -127,7 +127,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Authenticator.cpp" />
     <ClCompile Include="CPPFinalProject.cpp" />
+    <ClCompile Include="Dashboard.cpp" />
+    <ClCompile Include="Database.cpp" />
+    <ClCompile Include="DataCommunicator.cpp" />
+    <ClCompile Include="Date.cpp" />
+    <ClCompile Include="Processor.cpp" />
+    <ClCompile Include="UserCreator.cpp" />
+    <ClCompile Include="UserDataBase.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Authenticator.h" />
+    <ClInclude Include="Dashboard.h" />
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="DataCommunicator.h" />
+    <ClInclude Include="Date.h" />
+    <ClInclude Include="Processor.h" />
+    <ClInclude Include="User.h" />
+    <ClInclude Include="UserCreator.h" />
+    <ClInclude Include="UserDataBase.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
