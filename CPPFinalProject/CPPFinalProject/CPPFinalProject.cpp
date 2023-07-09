@@ -4,5 +4,7 @@
 int main()
 {
     Processor* prc = new Processor;
-    std::cout << "Hello World!\n";
+    Date* date = new Date;
+
+    date->print();
 }
