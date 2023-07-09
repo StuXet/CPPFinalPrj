@@ -2,10 +2,10 @@
 
 Processor::Processor() 
 {
-	database = new Database();
+	dataCommunicator = new DataCommunicator(*database);
 	authenticator = new Authenticator(*database);
+	database = new Database();
 	dashboard = new Dashboard();
-	dataCommunicator = new DataCommunicator();
 }
 
 Processor::~Processor()
