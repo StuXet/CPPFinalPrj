@@ -10,5 +10,6 @@ int main()
 /////////////////////////////////////////////
     UserDatabase userDatabase;
     User user;
-    userDatabase.AddUser(user);
+    //userDatabase.AddUser(user);
+    userDatabase.RemoveUser(&user);
 }

@@ -1,8 +1,7 @@
 #include "UserDataBase.h"
-
 #include <iostream>
-
 #include "UserCreator.h"
+#include <cstdio>
 
 //searches and returns a user in users by id
 User* UserDatabase::GetUser(std::string id)
@@ -28,4 +27,12 @@ void UserDatabase::AddUser(User& user)
 //searches and removes a user in users by id
 void UserDatabase::RemoveUser(User* user)
 {
+    std::string id;
+    std::cout << "Enter ID you want to delete: ";
+    std::getline(std::cin, id);
+
+    std::string fileName = id + ".txt";
+    if (std::remove(fileName.c_str()) != 0) {
+        std::cout << "Failed to delete the file." << std::endl;
+    }
 }
