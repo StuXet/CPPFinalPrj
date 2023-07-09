@@ -9,18 +9,15 @@ class Processor
 {
 private:
 
-	DataCommunicator dataCommunicator;
-	Authenticator authenticator;
-	Database database;
-	Dashboard dashboard;
+	DataCommunicator* dataCommunicator;
+	Authenticator* authenticator;
+	Database* database;
+	Dashboard* dashboard;
 
 public:
 	Processor();
 
-	DataCommunicator GetDataCommunicator();
-	Authenticator GetAuthenticator();
-	Database GetDatabase();
-	Dashboard GetDashboard();
+	
 
 };
 

@@ -1,25 +1,9 @@
 #include "Processor.h"
 
-Processor::Processor()
+Processor::Processor() 
 {
+	database = new Database();
+	authenticator = new Authenticator(*database);
 }
 
-DataCommunicator Processor::GetDataCommunicator()
-{
-	return DataCommunicator();
-}
 
-Authenticator Processor::GetAuthenticator()
-{
-	return Authenticator();
-}
-
-Database Processor::GetDatabase()
-{
-	return Database();
-}
-
-Dashboard Processor::GetDashboard()
-{
-	return Dashboard();
-}
