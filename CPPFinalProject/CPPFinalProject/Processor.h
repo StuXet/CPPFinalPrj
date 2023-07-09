@@ -4,6 +4,7 @@
 #include "Dashboard.h"
 #include "DataCommunicator.h"
 #include "Database.h"
+#include <string>
 
 class Processor
 {
@@ -16,4 +17,8 @@ private:
 public:
     Processor();
     ~Processor();
+
+    void CheckUser(std::string userID);
+    void AddUser(string _id, string _firstName, string _lastName, Date startDate, int subTime);
+
 };

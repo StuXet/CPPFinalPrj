@@ -9,6 +9,6 @@ public:
 
 	Date();
 
-	void SetCustomDate(int day, int month, int year);
+	void SetCustomDate(int _day, int _month, int _year);
 };
 

@@ -4,6 +4,9 @@ Date::Date()
 {
 }
 
-void Date::SetCustomDate(int day, int month, int year) : day(day), month(month), year(year)
+void Date::SetCustomDate(int _day, int _month, int _year) 
 {
+	day = _day;
+	month = _month;
+	year = _year;
 }

@@ -4,7 +4,7 @@ DataCommunicator::DataCommunicator(Database _database) : database(_database)
 {
 }
 
-bool DataCommunicator::AddUser(std::string userID)
+bool DataCommunicator::AddUser(string _id, string _firstName, string _lastName, Date startDate, int subTime)
 {
     return false;
 }

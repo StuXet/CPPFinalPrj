@@ -7,7 +7,7 @@ class Authenticator
 {
 public:
 	Authenticator(Database _database);
-	void CheckID(std::string id);
+	bool CheckID(std::string id);
 
 private: 
 	Database database;

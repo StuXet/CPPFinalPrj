@@ -5,7 +5,7 @@ Authenticator::Authenticator(Database _database) : database(_database)
 {
 }
 
-void Authenticator::CheckID(std::string id)
+bool Authenticator::CheckID(std::string id)
 {
-
+	return false;
 }
