@@ -8,16 +8,12 @@
 class Processor
 {
 private:
-
-	DataCommunicator* dataCommunicator;
-	Authenticator* authenticator;
-	Database* database;
-	Dashboard* dashboard;
+    DataCommunicator* dataCommunicator;
+    Authenticator* authenticator;
+    Database* database;
+    Dashboard* dashboard;
 
 public:
-	Processor();
-
-	
-
+    Processor();
+    ~Processor();
 };
-
