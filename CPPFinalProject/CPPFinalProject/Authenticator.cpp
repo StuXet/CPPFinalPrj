@@ -1,7 +1,7 @@
 #include "Authenticator.h"
 
 
-Authenticator::Authenticator(Database _database)
+Authenticator::Authenticator(Database _database) : database(_database)
 {
 }
 
