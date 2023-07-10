@@ -1,25 +1,41 @@
 #include "Dashboard.h"
 #include <iostream>
+#include <string>
 
+using namespace std;
 
 void Dashboard::DisplayUesrInfo(User* user)
 {
+	cout << "\nUser ID: " << user->id;
+	cout << "\nUser full name: " << user->firstName << " " << user->lastName;
+	string startDatestr = to_string(user->startDate->day) + "/" + to_string(user->startDate->month) + "/" + to_string(user->startDate->year);
+	string endDatestr = to_string(user->endDate->day) + "/" + to_string(user->endDate->month) + "/" + to_string(user->endDate->year);
+	cout << "\nUser subscription time: " << startDatestr << " - " << endDatestr;
+	cout << "\nUser facility entries: " << to_string(user->entriesCount);
 }
 
 void Dashboard::UserDoesntExists(std::string id)
 {
+	cout << "\nUser with ID of: " << id << " does not exist";
 }
 
 
 //display user info after success message
 void Dashboard::UserCreated(User* user)
 {
+	cout << "\nUser created successfuly";
+	cout << "\nNew user info:";
+	DisplayUesrInfo(user);
 }
 
 void Dashboard::UserRemoved(User* user)
 {
+	cout << "\nUser removed successfuly";
+	cout << "\nRemoved user info:";
+	DisplayUesrInfo(user);
 }
 
 void Dashboard::DisplayText(std::string text)
 {
+	cout << text;
 }

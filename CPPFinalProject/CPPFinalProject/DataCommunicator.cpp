@@ -20,6 +20,20 @@ bool DataCommunicator::RemoveUser(std::string userID)
 }
 
 //edit user info according to arguments, if argument is null dont apply it to the user
-void DataCommunicator::EditUser(std::string userID, string* newID, string* newFirstName, string* newLastName, Date* newStartDate, int* subTimeAddative)
+void DataCommunicator::EditUser(std::string userID, string newID, string newFirstName, string newLastName, int subTimeAddative)
 {
+    User* curUser = database.userDatabase->GetUser(userID);
+    if (newID != "")
+    {
+        curUser->id = newID;
+    }
+    if (newFirstName != "")
+    {
+        curUser->firstName = newFirstName;
+    }
+    if (newLastName != "")
+    {
+        curUser->lastName = newLastName;
+    }
+    curUser->endDate->month += subTimeAddative;
 }
