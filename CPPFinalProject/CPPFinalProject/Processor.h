@@ -20,7 +20,7 @@ public:
 
 
     void CheckUser(std::string userID);
-    void AddUser(string _id, string _firstName, string _lastName, Date startDate, int subTime);
+    void AddUser(string _id, string _firstName, string _lastName, int subTime);
     void RemoveUser(std::string userID);
     void EditUser(std::string userID);
 

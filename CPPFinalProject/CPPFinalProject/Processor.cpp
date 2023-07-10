@@ -21,7 +21,7 @@ void Processor::CheckUser(std::string userID)
 }
 
 
-void Processor::AddUser(string _id, string _firstName, string _lastName, Date startDate, int subTime)
+void Processor::AddUser(string _id, string _firstName, string _lastName, int subTime)
 {
 }
 
