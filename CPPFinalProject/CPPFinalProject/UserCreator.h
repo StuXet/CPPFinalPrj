@@ -9,6 +9,6 @@ using namespace std;
 class UserCreator
 {
 public:
-	User CreateUser(string _id, string _firstName, string _lastName, Date startDate, int subTime);
+	User* CreateUser(string _id, string _firstName, string _lastName, int subTime);
 };
 

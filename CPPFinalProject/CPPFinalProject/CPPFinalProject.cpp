@@ -3,8 +3,8 @@
 
 int main()
 {
-    Processor* prc = new Processor;
-    Date* date = new Date;
+    UserCreator uc;
 
-    date->print();
+    uc.CreateUser("poopie", "limpy", "sligo", 8);
+
 }

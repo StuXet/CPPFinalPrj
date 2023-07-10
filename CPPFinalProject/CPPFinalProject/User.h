@@ -8,7 +8,7 @@ public:
 	std::string id;
 	std::string firstName;
 	std::string lastName;
-	Date startDate;
-	Date endDate;
+	Date* startDate;
+	Date* endDate;
 	int entriesCount;
 };

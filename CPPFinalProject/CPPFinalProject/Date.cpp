@@ -7,9 +7,14 @@ Date::Date()
 {
 	time_t now = time(0);
 	tm* ltm = localtime(&now);
+	day = ltm->tm_mday;
+	month = ltm->tm_mon;
+	year = 1900 + ltm->tm_year;
 	char buffer[80];
 	strftime(buffer, 80, "%d-%m-%Y %H:%M:%S", ltm);
 	date_time = std::string(buffer);
+
+	
 }
 
 void Date::SetCustomDate(int _day, int _month, int _year) 
