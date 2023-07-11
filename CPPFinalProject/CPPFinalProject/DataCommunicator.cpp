@@ -35,5 +35,6 @@ void DataCommunicator::EditUser(std::string userID, string newID, string newFirs
     {
         curUser->lastName = newLastName;
     }
-    curUser->endDate->month += subTimeAddative;
+    //curUser->endDate->month += subTimeAddative; ****TBI****
+
 }

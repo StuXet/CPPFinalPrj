@@ -1,10 +1,10 @@
 #include <iostream>
-#include "Processor.h"
+#include "Program.h"
 
 int main()
 {
-    UserCreator uc;
+	Program prog;
 
-    uc.CreateUser("poopie", "limpy", "sligo", 8);
-
+	prog.Run();
+	
 }

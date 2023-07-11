@@ -134,6 +134,7 @@
     <ClCompile Include="DataCommunicator.cpp" />
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="Processor.cpp" />
+    <ClCompile Include="Program.cpp" />
     <ClCompile Include="UserCreator.cpp" />
     <ClCompile Include="UserDataBase.cpp" />
   </ItemGroup>
@@ -144,6 +145,7 @@
     <ClInclude Include="DataCommunicator.h" />
     <ClInclude Include="Date.h" />
     <ClInclude Include="Processor.h" />
+    <ClInclude Include="Program.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="UserCreator.h" />
     <ClInclude Include="UserDataBase.h" />

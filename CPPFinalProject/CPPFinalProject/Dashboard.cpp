@@ -37,5 +37,19 @@ void Dashboard::UserRemoved(User* user)
 
 void Dashboard::DisplayText(std::string text)
 {
-	cout << text;
+	cout << "\n" << text;
+}
+
+int Dashboard::GetIntInput()
+{
+	int n;
+	cin >> n;
+	return n;
+}
+
+string Dashboard::GetStringIput()
+{
+	string s;
+	cin >> s;
+	return s;
 }

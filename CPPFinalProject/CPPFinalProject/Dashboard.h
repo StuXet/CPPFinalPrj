@@ -11,5 +11,7 @@ public:
 	void UserCreated(User* user);
 	void UserRemoved(User* user);
 	void DisplayText(std::string text);
+	int GetIntInput();
+	std::string GetStringIput();
 };
 
