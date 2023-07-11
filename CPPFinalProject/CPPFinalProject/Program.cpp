@@ -81,7 +81,7 @@ void Program::UserDoesntExistLogic()
 {
 	while (true)
 	{
-		prc->DisplayText("Enter: \n1 - Continue \n2 - Add user");
+		prc->DisplayText("Enter: \n1 - Continue \n2 - Add user\n");
 		int res = prc->GetInputInt();
 
 		if (res == 1)
