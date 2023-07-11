@@ -53,7 +53,9 @@ void Processor::EditUser(std::string userID, string newID, string newFirstName, 
 
 
 	dataCommunicator->EditUser(userID, newID, newFirstName, newLastName, subTimeAddative);
-	dashboard->DisplayUesrInfo(database->userDatabase->GetUser(newID));
+	
+	string currentID = newID == "skip" ? userID : newID;
+	dashboard->DisplayUesrInfo(database->userDatabase->GetUser(currentID));
 }
 
 void Processor::DisplayText(std::string text)
