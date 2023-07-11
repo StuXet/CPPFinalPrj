@@ -3,8 +3,6 @@
 
 int main()
 {
-	Program prog;
-
-	prog.Run();
+	
 	
 }
