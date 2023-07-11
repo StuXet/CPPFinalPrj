@@ -139,6 +139,7 @@
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="UserCreator.cpp" />
     <ClCompile Include="UserDataBase.cpp" />
+    <ClCompile Include="UserFormatConverter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Authenticator.h" />
@@ -151,6 +152,7 @@
     <ClInclude Include="User.h" />
     <ClInclude Include="UserCreator.h" />
     <ClInclude Include="UserDataBase.h" />
+    <ClInclude Include="UserFormatConverter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
