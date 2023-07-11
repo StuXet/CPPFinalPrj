@@ -24,6 +24,6 @@ User* UserCreator::CreateUser(string _id, string _firstName, string _lastName, i
         newUser->endDate->year++;
     }
     newUser->endDate->month = endM;
-   
+
     return newUser;
 }
