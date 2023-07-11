@@ -43,7 +43,13 @@ void Dashboard::DisplayText(std::string text)
 int Dashboard::GetIntInput()
 {
 	int n;
-	cin >> n;
+	while (!(cin >> n)) 
+	{
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+		cout << "Invalid input. Please enter an integer: ";
+	}
 	return n;
 }
 
