@@ -5,8 +5,7 @@
 class UserFormatConverter
 {
 public:
-	User FileToObject(std::ofstream file);
+	User FileToObject(std::string file);
 	void ObjectToFile(User user);
 
 };
-
