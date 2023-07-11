@@ -23,15 +23,15 @@ bool DataCommunicator::RemoveUser(std::string userID)
 void DataCommunicator::EditUser(std::string userID, string newID, string newFirstName, string newLastName, int subTimeAddative)
 {
     User* curUser = database.userDatabase->GetUser(userID);
-    if (newID != "")
+    if (newID != "skip")
     {
         curUser->id = newID;
     }
-    if (newFirstName != "")
+    if (newFirstName != "skip")
     {
         curUser->firstName = newFirstName;
     }
-    if (newLastName != "")
+    if (newLastName != "skip")
     {
         curUser->lastName = newLastName;
     }

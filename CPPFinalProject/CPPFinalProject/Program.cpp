@@ -123,7 +123,7 @@ void Program::RemoveUserLogic()
 
 void Program::EditUserLogic()
 {
-	prc->DisplayText("Enter new info to user " + currentUserID + "\nif you dont want to change a specific part, press enter");
+	prc->DisplayText("Enter new info to user " + currentUserID + "\nif you dont want to change a specific part, enter \"skip\"");
 
 	prc->DisplayText("Enter new ID: ");
 	string newID = prc->GetInputString();
