@@ -43,7 +43,7 @@ void UserDatabase::AddUser(User user)
 //using the given user id, find the correct file in the users folder and remove it
 //when looking for the file, remember to add .txt after the id string (look at GetUser() for reference)
 //return true if reomved successfuly
-bool UserDatabase::RemoveUser(User* user)
+bool UserDatabase::RemoveUser(User user)
 {
 	
 
