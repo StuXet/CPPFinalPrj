@@ -48,6 +48,9 @@
     <ClCompile Include="UserFormatConverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UserDataBase.h">

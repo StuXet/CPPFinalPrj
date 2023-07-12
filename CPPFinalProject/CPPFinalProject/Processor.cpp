@@ -67,7 +67,11 @@ void Processor::UserEnteredFacility(std::string userID)
 {
 	//open facility gate
 
-	database->userDatabase->GetUser(userID)->entriesCount++;
+	User* curUser = database->userDatabase->GetUser(userID);
+	database->userDatabase->RemoveUser(curUser);
+	curUser->entriesCount++;
+	database->userDatabase->AddUser(curUser);
+	delete curUser;
 }
 
 int Processor::GetInputInt()

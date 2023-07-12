@@ -9,9 +9,6 @@ User* UserCreator::CreateUser(string _id, string _firstName, string _lastName, i
     newUser->firstName = _firstName;
     newUser->lastName = _lastName;
 
-    newUser->startDate = new Date();
-    newUser->endDate = new Date();
-
     int endM = newUser->endDate->month;
 
     if (endM + subTime <= 12)

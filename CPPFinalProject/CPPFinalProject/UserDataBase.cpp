@@ -32,7 +32,7 @@ bool UserDatabase::AddUser(User* user)
 	std::string userData = UserFormatConverter::ObjectToFile(user);
 	std::string fileNmae = user->id + ".txt";
 	std::ofstream outputFile("users\\" + fileNmae);
-	if (!std::filesystem::exists("users\\" + fileNmae))
+	if (!std::filesystem::exists(fileNmae))
 	{
 		std::ofstream outputFile("users\\" + fileNmae);
 		if (outputFile)
@@ -50,9 +50,15 @@ bool UserDatabase::AddUser(User* user)
 bool UserDatabase::RemoveUser(User* user)
 {
 	std::string strTemp = "users\\" + user->id + ".txt";
-	char* char_array = new char(strTemp.length() + 1);
-	strcpy_s(char_array,strTemp.length() + 1, strTemp.c_str());
+	char* char_array = new char[strTemp.length() + 1];
+	strcpy_s(char_array, strTemp.length() + 1, strTemp.c_str());
 
-	remove(char_array);
+	if (remove(char_array) == 0) 
+	{
+		delete[]  char_array;
+		return true;
+	}
+	delete[] char_array;
 	return false;
+
 }

@@ -5,6 +5,8 @@
 
 class User {
 public:
+	User();
+
 	std::string id;
 	std::string firstName;
 	std::string lastName;

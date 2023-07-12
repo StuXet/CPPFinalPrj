@@ -1,8 +1,10 @@
 #include <iostream>
 #include "Program.h"
+#include "UserFormatConverter.h"
 
 int main()
 {
-	Program program;
-	program.Run();
+	Program prg;
+	prg.Run();
+
 }
