@@ -32,9 +32,9 @@ bool UserDatabase::AddUser(User* user)
 	std::string userData = UserFormatConverter::ObjectToFile(user);
 	std::string fileNmae = user->id + ".txt";
 	std::ofstream outputFile("users\\" + fileNmae);
-	if (!std::filesystem::exists(fileNmae))
+	if (!std::filesystem::exists("users\\" + fileNmae))
 	{
-		std::ofstream outputFile(fileNmae);
+		std::ofstream outputFile("users\\" + fileNmae);
 		if (outputFile)
 		{
 			outputFile << userData;
