@@ -11,5 +11,7 @@ Database::Database()
 
 Database::~Database()
 {
-	
+	/* Destructor is empty because we get exit code 0xC0000005
+	 * general protection fault error (access violation)
+	*/
 }
