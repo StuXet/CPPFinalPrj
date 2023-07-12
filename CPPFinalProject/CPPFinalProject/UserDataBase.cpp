@@ -33,4 +33,5 @@ bool UserDatabase::RemoveUser(User* user)
 	}
 	return GetUser(users[i]->id) != nullptr;
 
+
 }
