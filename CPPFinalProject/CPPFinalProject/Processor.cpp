@@ -67,7 +67,7 @@ void Processor::UserEnteredFacility(std::string userID)
 {
 	//open facility gate
 
-	database->userDatabase->GetUser(userID)->entriesCount ++;
+	database->userDatabase->GetUser(userID)->entriesCount++;
 }
 
 int Processor::GetInputInt()

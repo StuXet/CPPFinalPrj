@@ -53,9 +53,9 @@ User UserFormatConverter::FileToObject(std::string fileID)
 	return newUser;
 }
 
-User UserFormatConverter::FileToObject(std::string fileID, std::string fileContent)
+User* UserFormatConverter::FileToObject(std::string fileID, std::string fileContent)
 {
-	User tmpUser;
+	User* tmpUser = new User();
 
 	std::vector<std::string> params;
 	std::stringstream iss(fileContent);
@@ -66,17 +66,17 @@ User UserFormatConverter::FileToObject(std::string fileID, std::string fileConte
 		params.push_back(line);
 	}
 
-	tmpUser.id = fileID;
+	tmpUser->id = fileID;
 
-	tmpUser.firstName = params[0];
-	tmpUser.lastName = params[1];
-	tmpUser.startDate->day = std::stoi(params[2]);
-	tmpUser.startDate->month = std::stoi(params[3]);
-	tmpUser.startDate->year = std::stoi(params[4]);
-	tmpUser.endDate->day = std::stoi(params[5]);
-	tmpUser.endDate->month = std::stoi(params[6]);
-	tmpUser.endDate->year = std::stoi(params[7]);
-	tmpUser.entriesCount = std::stoi(params[8]);
+	tmpUser->firstName = params[0];
+	tmpUser->lastName = params[1];
+	tmpUser->startDate->day = std::stoi(params[2]);
+	tmpUser->startDate->month = std::stoi(params[3]);
+	tmpUser->startDate->year = std::stoi(params[4]);
+	tmpUser->endDate->day = std::stoi(params[5]);
+	tmpUser->endDate->month = std::stoi(params[6]);
+	tmpUser->endDate->year = std::stoi(params[7]);
+	tmpUser->entriesCount = std::stoi(params[8]);
 
 
 	return tmpUser;
@@ -87,19 +87,19 @@ User UserFormatConverter::FileToObject(std::string fileID, std::string fileConte
 /// </summary>
 /// <param name="user"></param>
 /// <returns></returns>
-std::string UserFormatConverter::ObjectToFile(User user)
+std::string UserFormatConverter::ObjectToFile(User* user)
 {
 	std::string fileContent;
 	
-	fileContent += user.firstName + "\n";
-	fileContent += user.lastName + "\n";
-	fileContent += std::to_string(user.startDate->day) + "\n";
-	fileContent += std::to_string(user.startDate->month) + "\n";
-	fileContent += std::to_string(user.startDate->year) + "\n";
-	fileContent += std::to_string(user.endDate->day) + "\n";
-	fileContent += std::to_string(user.endDate->month) + "\n";
-	fileContent += std::to_string(user.endDate->year) + "\n";
-	fileContent += std::to_string(user.entriesCount);
+	fileContent += user->firstName + "\n";
+	fileContent += user->lastName + "\n";
+	fileContent += std::to_string(user->startDate->day) + "\n";
+	fileContent += std::to_string(user->startDate->month) + "\n";
+	fileContent += std::to_string(user->startDate->year) + "\n";
+	fileContent += std::to_string(user->endDate->day) + "\n";
+	fileContent += std::to_string(user->endDate->month) + "\n";
+	fileContent += std::to_string(user->endDate->year) + "\n";
+	fileContent += std::to_string(user->entriesCount);
 
 	return fileContent;
 }
