@@ -5,16 +5,24 @@
 #include <string>
 #include <iterator>
 
-namespace fs = std::filesystem;
+//namespace fs = std::filesystem;
 
 
 //searches and returns a user in users by id
-User* UserDatabase::GetUser(std::string id)
+User UserDatabase::GetUser(std::string id)
 {
 	std::ifstream in_file("users\\" + id + ".txt");
+
+	if (!in_file)
+	{
+		User nullUser;
+		nullUser.id = "";
+		return nullUser;
+	}
+
 	std::string info(std::istreambuf_iterator<char>(in_file), (std::istreambuf_iterator<char>()));
 	User curUser = UserFormatConverter::FileToObject(id, info);
-	return nullptr;
+	return curUser;
 }
 
 //1. convert the user to string using "UserFormatConverter::ObjectToFile".
@@ -34,17 +42,9 @@ void UserDatabase::AddUser(User user)
 
 //using the given user id, find the correct file in the users folder and remove it
 //when looking for the file, remember to add .txt after the id string (look at GetUser() for reference)
+//return true if reomved successfuly
 bool UserDatabase::RemoveUser(User* user)
 {
-	int i = 0;
-	for (i; i < users.size(); i++)
-	{
-		if (users[i] == user)
-		{
-			users.erase(users.begin() + i);
-			break;
-		}
-	}
-	return GetUser(users[i]->id) != nullptr;
+	
 
 }

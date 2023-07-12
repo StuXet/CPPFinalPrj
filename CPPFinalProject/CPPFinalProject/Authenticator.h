@@ -8,7 +8,7 @@ class Authenticator
 public:
 	Authenticator(Database _database);
 
-	User* CheckID(std::string id);
+	User CheckID(std::string id);
 
 
 private: 
