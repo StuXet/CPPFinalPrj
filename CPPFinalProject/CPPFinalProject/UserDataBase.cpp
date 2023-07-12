@@ -1,4 +1,5 @@
 #include "UserDataBase.h"
+#include <filesystem>
 #include "UserFormatConverter.h"
 #include <fstream>
 #include <iostream>
@@ -29,15 +30,21 @@ User UserDatabase::GetUser(std::string id)
 //2. the first line of the string is the user id aka the file name, so create a file in the folder "users\"
 //   and make the file name equal to the first line of the string from before.
 //3. fill the new user file with the user string except the first line(the first line is the id so we ignore it)
-void UserDatabase::AddUser(User user)
+bool UserDatabase::AddUser(User user)
 {
 	std::string userData = UserFormatConverter::ObjectToFile(user);
 	std::string fileNmae = user.id + ".txt";
 	std::ofstream outputFile("users\\" + fileNmae);
-	if (!outputFile)
+	if (!std::filesystem::exists(fileNmae))
 	{
-		outputFile << userData;
+		std::ofstream outputFile(fileNmae);
+		if (outputFile)
+		{
+			outputFile << userData;
+			return true;
+		}
 	}
+	return false;
 }
 
 //using the given user id, find the correct file in the users folder and remove it
