@@ -90,8 +90,7 @@ User UserFormatConverter::FileToObject(std::string fileID, std::string fileConte
 std::string UserFormatConverter::ObjectToFile(User user)
 {
 	std::string fileContent;
-
-	fileContent += user.id + "\n";
+	
 	fileContent += user.firstName + "\n";
 	fileContent += user.lastName + "\n";
 	fileContent += std::to_string(user.startDate->day) + "\n";
