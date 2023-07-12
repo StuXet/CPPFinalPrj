@@ -19,7 +19,6 @@ void Dashboard::UserDoesntExists(std::string id)
 	cout << "\nUser with ID of: " << id << " does not exist";
 }
 
-
 //display user info after success message
 void Dashboard::UserCreated(User* user)
 {

@@ -8,6 +8,7 @@ class Program
 public:
 	Program();
 	void Run();
+	
 private:
 	Processor* prc;
 	State state = CheckID;

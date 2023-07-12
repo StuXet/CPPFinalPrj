@@ -13,4 +13,3 @@ public:
 	int GetIntInput();
 	std::string GetStringIput();
 };
-

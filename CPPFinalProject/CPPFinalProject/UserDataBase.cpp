@@ -1,10 +1,8 @@
 #include "UserDataBase.h"
 #include "UserFormatConverter.h"
 #include <fstream>
-#include <iostream>
 #include <string>
 #include <filesystem>
-
 
 //searches and returns a user in users by id
 User* UserDatabase::GetUser(std::string id)

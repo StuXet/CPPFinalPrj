@@ -78,7 +78,6 @@ User* UserFormatConverter::FileToObject(std::string fileID, std::string fileCont
 	tmpUser->endDate->year = std::stoi(params[7]);
 	tmpUser->entriesCount = std::stoi(params[8]);
 
-
 	return tmpUser;
 }
 

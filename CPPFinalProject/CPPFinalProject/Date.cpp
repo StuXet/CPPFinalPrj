@@ -1,7 +1,6 @@
 #include "Date.h"
 #include <ctime>
 #include <iostream>
-//#pragma warning(disable : 4996)
 
 Date::Date()
 {
@@ -23,6 +22,7 @@ void Date::SetCustomDate(int _day, int _month, int _year)
 	year = _year;
 }
 
-void Date::print() {
+void Date::print()
+{
 	std::cout << "Current Date and Time: " << date_time << std::endl;
 }

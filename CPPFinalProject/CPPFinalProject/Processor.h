@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Authenticator.h"
 #include "Dashboard.h"
 #include "DataCommunicator.h"
@@ -8,16 +7,10 @@
 
 class Processor
 {
-private:
-    DataCommunicator* dataCommunicator;
-    Authenticator* authenticator;
-    Database* database;
-    Dashboard* dashboard;
 
 public:
     Processor();
     ~Processor();
-
 
     bool CheckUser(std::string userID);
     void AddUser(string _id, string _firstName, string _lastName, int subTime);
@@ -27,4 +20,10 @@ public:
     void UserEnteredFacility(std::string userID);
     int GetInputInt();
     std::string GetInputString();
+    
+private:
+    DataCommunicator* dataCommunicator;
+    Authenticator* authenticator;
+    Database* database;
+    Dashboard* dashboard;
 };

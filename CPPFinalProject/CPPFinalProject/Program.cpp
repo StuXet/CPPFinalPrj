@@ -53,7 +53,7 @@ void Program::UserOptionsLogic()
 {
 	while (true)
 	{
-		prc->DisplayText("Enter:\n1 - Remove user \n2 - Edit user \n3 - \Continue");
+		prc->DisplayText("Enter:\n1 - Remove user \n2 - Edit user \n3 - \Continue\n");
 		int res = prc->GetInputInt();
 
 		if (res == 1)
@@ -74,7 +74,6 @@ void Program::UserOptionsLogic()
 		}
 		prc->DisplayText("Invalid option, try again");
 	}
-
 }
 
 void Program::UserDoesntExistLogic()

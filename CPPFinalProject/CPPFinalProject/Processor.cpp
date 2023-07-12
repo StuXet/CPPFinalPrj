@@ -31,7 +31,6 @@ bool Processor::CheckUser(std::string userID)
 	}
 }
 
-
 void Processor::AddUser(string _id, string _firstName, string _lastName, int subTime)
 {
 	User* newUser = database->userCreator->CreateUser(_id, _firstName, _lastName, subTime);
@@ -50,8 +49,6 @@ void Processor::RemoveUser(std::string userID)
 void Processor::EditUser(std::string userID, string newID, string newFirstName, string newLastName, int subTimeAddative)
 {
 	//*************TBI**************
-
-
 	dataCommunicator->EditUser(userID, newID, newFirstName, newLastName, subTimeAddative);
 	
 	string currentID = newID == "skip" ? userID : newID;
@@ -66,7 +63,6 @@ void Processor::DisplayText(std::string text)
 void Processor::UserEnteredFacility(std::string userID)
 {
 	//open facility gate
-
 	User* curUser = database->userDatabase->GetUser(userID);
 	database->userDatabase->RemoveUser(curUser);
 	curUser->entriesCount++;
@@ -83,5 +79,3 @@ std::string Processor::GetInputString()
 {
 	return dashboard->GetStringIput();
 }
-
-

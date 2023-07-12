@@ -5,11 +5,9 @@
 class Database
 {
 public:
-
 	UserDatabase* userDatabase;
 	UserCreator* userCreator;
 	
 	Database();
 	~Database();
 };
-

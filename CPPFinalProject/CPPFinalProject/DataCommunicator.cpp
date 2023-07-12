@@ -1,9 +1,6 @@
 #include "DataCommunicator.h"
 
-DataCommunicator::DataCommunicator(Database _database) : database(_database)
-{
-}
-
+DataCommunicator::DataCommunicator(Database _database) : database(_database) {}
 
 //create and add a user to userDB using userCreator, return true if successful
 bool DataCommunicator::AddUser(string _id, string _firstName, string _lastName, int subTime)

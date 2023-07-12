@@ -6,6 +6,4 @@ Database::Database()
 	userCreator = new UserCreator();
 }
 
-Database::~Database()
-{
-}
+Database::~Database() {}
