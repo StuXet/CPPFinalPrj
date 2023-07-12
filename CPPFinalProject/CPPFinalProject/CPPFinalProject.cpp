@@ -3,5 +3,6 @@
 
 int main()
 {
-	
+	Program program;
+	program.Run();
 }

@@ -51,8 +51,8 @@ bool UserDatabase::RemoveUser(User* user)
 {
 	std::string strTemp = "users\\" + user->id + ".txt";
 	char* char_array = new char(strTemp.length() + 1);
-	strcpy(char_array, strTemp.c_str());
+	strcpy_s(char_array,strTemp.length() + 1, strTemp.c_str());
 
 	remove(char_array);
-
+	return false;
 }
