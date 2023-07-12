@@ -5,6 +5,7 @@
 class User {
 public:
 	User();
+	~User();
 
 	std::string id;
 	std::string firstName;

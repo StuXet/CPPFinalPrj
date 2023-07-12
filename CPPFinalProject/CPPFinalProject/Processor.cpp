@@ -46,10 +46,10 @@ void Processor::RemoveUser(std::string userID)
 	delete curUser;
 }
 
-void Processor::EditUser(std::string userID, string newID, string newFirstName, string newLastName, int subTimeAddative)
+void Processor::EditUser(std::string userID, string newID, string newFirstName, string newLastName)
 {
 	//*************TBI**************
-	dataCommunicator->EditUser(userID, newID, newFirstName, newLastName, subTimeAddative);
+	dataCommunicator->EditUser(userID, newID, newFirstName, newLastName);
 	
 	string currentID = newID == "skip" ? userID : newID;
 	dashboard->DisplayUesrInfo(database->userDatabase->GetUser(currentID));

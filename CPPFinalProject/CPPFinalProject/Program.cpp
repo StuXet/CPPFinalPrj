@@ -133,10 +133,7 @@ void Program::EditUserLogic()
 	prc->DisplayText("Enter new last name: ");
 	string newLName = prc->GetInputString();
 
-	prc->DisplayText("Enter subsription time addatice (can be negative): ");
-	int subTimeAdd = prc->GetInputInt();
-
-	prc->EditUser(currentUserID, newID, newFName, newLName, subTimeAdd);
+	prc->EditUser(currentUserID, newID, newFName, newLName);
 	
 	state = CheckID;
 }

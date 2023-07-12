@@ -17,7 +17,7 @@ bool DataCommunicator::RemoveUser(std::string userID)
 }
 
 //edit user info according to arguments, if argument is null dont apply it to the user
-void DataCommunicator::EditUser(std::string userID, string newID, string newFirstName, string newLastName, int subTimeAddative)
+void DataCommunicator::EditUser(std::string userID, string newID, string newFirstName, string newLastName)
 {
     User* curUser = database.userDatabase->GetUser(userID);
     database.userDatabase->RemoveUser(curUser);
@@ -34,7 +34,6 @@ void DataCommunicator::EditUser(std::string userID, string newID, string newFirs
         curUser->lastName = newLastName;
     }
     database.userDatabase->AddUser(curUser);
-
-    //curUser->endDate->month += subTimeAddative; ****TBI****
+    
     delete curUser;
 }

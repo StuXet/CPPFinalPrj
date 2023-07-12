@@ -5,9 +5,9 @@
 class Database
 {
 public:
-	UserDatabase* userDatabase;
-	UserCreator* userCreator;
-	
 	Database();
 	~Database();
+	
+	UserDatabase* userDatabase;
+	UserCreator* userCreator;
 };
