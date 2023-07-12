@@ -52,6 +52,10 @@ bool UserDatabase::AddUser(User user)
 //return true if reomved successfuly
 bool UserDatabase::RemoveUser(User user)
 {
-	
+	std::string strTemp = "users\\" + user.id + ".txt";
+	char* char_array = new char(strTemp.length() + 1);
+	strcpy(char_array, strTemp.c_str());
+
+	remove(char_array);
 
 }
