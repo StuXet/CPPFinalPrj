@@ -4,6 +4,11 @@ Program::Program() : prc(new Processor())
 {
 }
 
+Program::~Program()
+{
+	delete prc;
+}
+
 void Program::Run()
 {
 	while (true)

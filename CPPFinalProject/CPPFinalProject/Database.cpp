@@ -11,15 +11,5 @@ Database::Database()
 
 Database::~Database()
 {
-	if (userDatabase)
-	{
-		delete userDatabase;
-		userDatabase = nullptr;
-	}
 	
-	if (userCreator)
-	{
-		delete userCreator;
-		userCreator = nullptr;
-	}
 }

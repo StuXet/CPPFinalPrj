@@ -53,6 +53,7 @@ User UserFormatConverter::FileToObject(std::string fileID)
 	return newUser;
 }
 
+//recieves user data as string and returns user object with the data
 User* UserFormatConverter::FileToObject(std::string fileID, std::string fileContent)
 {
 	User* tmpUser = new User();
@@ -61,11 +62,12 @@ User* UserFormatConverter::FileToObject(std::string fileID, std::string fileCont
 	std::stringstream iss(fileContent);
 	std::string line;
 
+	//adds each value from the string to params as a single element
 	while (std::getline(iss, line))
 	{
 		params.push_back(line);
 	}
-
+	//applies info to new user
 	tmpUser->id = fileID;
 
 	tmpUser->firstName = params[0];
@@ -81,15 +83,12 @@ User* UserFormatConverter::FileToObject(std::string fileID, std::string fileCont
 	return tmpUser;
 }
 
-/// <summary>
-/// Returns a string of the user's info where the first line is the ID
-/// </summary>
-/// <param name="user"></param>
-/// <returns></returns>
+//recieves use object and returns string of data in the correct format for the file
 std::string UserFormatConverter::ObjectToFile(User* user)
 {
 	std::string fileContent;
 	
+	//Add user info to string with \n between each value
 	fileContent += user->firstName + "\n";
 	fileContent += user->lastName + "\n";
 	fileContent += std::to_string(user->startDate->day) + "\n";

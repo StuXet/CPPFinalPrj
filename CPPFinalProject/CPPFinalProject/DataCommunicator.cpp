@@ -2,7 +2,6 @@
 
 DataCommunicator::DataCommunicator(Database _database) : database(_database) {}
 
-//create and add a user to userDB using userCreator, return true if successful
 bool DataCommunicator::AddUser(string _id, string _firstName, string _lastName, int subTime)
 {
     User* newUser = database.userCreator->CreateUser(_id, _firstName, _lastName, subTime);
@@ -10,16 +9,16 @@ bool DataCommunicator::AddUser(string _id, string _firstName, string _lastName, 
     return database.userDatabase->GetUser(newUser->id) != nullptr;
 }
 
-//remove user from userDB return true if successful
 bool DataCommunicator::RemoveUser(std::string userID)
 {
     return database.userDatabase->RemoveUser(database.userDatabase->GetUser(userID));
 }
 
-//edit user info according to arguments, if argument is null dont apply it to the user
 void DataCommunicator::EditUser(std::string userID, string newID, string newFirstName, string newLastName)
 {
     User* curUser = database.userDatabase->GetUser(userID);
+
+    //removes original user and later adds new modified version of the user
     database.userDatabase->RemoveUser(curUser);
     if (newID != "skip")
     {

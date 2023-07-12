@@ -7,6 +7,7 @@ class Program
 {
 public:
 	Program();
+	~Program();
 	void Run();
 	
 private:

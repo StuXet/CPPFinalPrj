@@ -12,6 +12,7 @@ void Dashboard::DisplayUesrInfo(User* user)
 	string endDatestr = to_string(user->endDate->day) + "/" + to_string(user->endDate->month) + "/" + to_string(user->endDate->year);
 	cout << "\nUser subscription time: " << startDatestr << " - " << endDatestr;
 	cout << "\nUser facility entries: " << to_string(user->entriesCount);
+	//delete user;
 }
 
 void Dashboard::UserDoesntExists(std::string id)
@@ -19,7 +20,6 @@ void Dashboard::UserDoesntExists(std::string id)
 	cout << "\nUser with ID of: " << id << " does not exist";
 }
 
-//display user info after success message
 void Dashboard::UserCreated(User* user)
 {
 	cout << "\nUser created successfuly";

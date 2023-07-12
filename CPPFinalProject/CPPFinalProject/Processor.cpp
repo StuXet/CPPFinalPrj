@@ -27,6 +27,7 @@ bool Processor::CheckUser(std::string userID)
 	else
 	{
 		dashboard->UserDoesntExists(userID);
+		delete curUser;
 		return false;
 	}
 }
@@ -48,7 +49,6 @@ void Processor::RemoveUser(std::string userID)
 
 void Processor::EditUser(std::string userID, string newID, string newFirstName, string newLastName)
 {
-	//*************TBI**************
 	dataCommunicator->EditUser(userID, newID, newFirstName, newLastName);
 	
 	string currentID = newID == "skip" ? userID : newID;
@@ -63,6 +63,7 @@ void Processor::DisplayText(std::string text)
 void Processor::UserEnteredFacility(std::string userID)
 {
 	//open facility gate
+	//removes original user and adds new modified version of the user
 	User* curUser = database->userDatabase->GetUser(userID);
 	database->userDatabase->RemoveUser(curUser);
 	curUser->entriesCount++;
